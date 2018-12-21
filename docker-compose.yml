@@ -1,0 +1,43 @@
+version: '2'
+services:
+    parser_web:
+        container_name: parser-web-container
+        build:
+            context: ./data/docker/web
+            dockerfile: dev/Dockerfile
+            args:
+                HOST_UID: ${HOST_UID}
+        restart: always
+        volumes:
+            - .:/var/www/html
+        links:
+            - parser_db
+            - parser_redis
+        depends_on:
+            - parser_db
+            - parser_redis
+
+    parser_db:
+        container_name: parser-db-container
+        build:
+            context: ./data/docker/db
+            args:
+                HOST_UID: ${HOST_UID}
+        restart: always
+        volumes:
+            - ./data/volumes/db:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+            MYSQL_DATABASE: parser
+            MYSQL_USER: docker
+            MYSQL_PASSWORD: secret
+
+    parser_redis:
+        container_name: parser-redis-container
+        restart: always
+        build:
+            context: ./data/docker/redis
+            args:
+                HOST_UID: ${HOST_UID}
+        volumes:
+            - ./data/volumes/redis:/data

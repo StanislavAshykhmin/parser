@@ -1,0 +1,5 @@
+version: '2'
+services:
+    parser_web:
+        ports:
+            - "45009:80"
