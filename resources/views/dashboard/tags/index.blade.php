@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-header">
             <h5 class="card-title">Tags
-                <button type="button" class="btn btn-primary float-right" data-toggle="modal"
+                <button type="button" class="btn btn-primary float-right enter" data-toggle="modal"
                         data-target="#centeredModalPrimary">Create tag
                 </button>
             </h5>

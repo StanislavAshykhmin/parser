@@ -14,6 +14,11 @@
                             <label class="form-label">Please enter the full name of the tag for the correct work of the
                                 parser. Example: javascript, not js.</label>
                             <input name="name" type="text" class="form-control" autofocus placeholder="Tag name">
+                            @if ($errors->has('name'))
+                                <span class="help-block">
+                         <strong>{{ $errors->first('name') }}</strong>
+                     </span>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -25,3 +30,4 @@
         </div>
     </div>
 </div>
+

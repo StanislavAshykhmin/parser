@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Helpers\ParserStackOverflow;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TagRequest;
 use App\Model\Dashboard\Tag;
 use App\Model\Parser\Record;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class TagsController extends Controller
@@ -16,7 +16,7 @@ class TagsController extends Controller
         return view('dashboard.tags.index', ['user' => Auth::user(), 'tags' => Tag::all()]);
     }
 
-    public function store(Request $request)
+    public function store(TagRequest $request)
     {
         $data = $request->all();
         $content = new ParserStackOverflow();

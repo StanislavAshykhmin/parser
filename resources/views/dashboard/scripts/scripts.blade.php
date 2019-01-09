@@ -4,3 +4,8 @@
 <script src="{{ asset('js/forms.js') }}"></script>
 <script src="{{ asset('js/maps.js') }}"></script>
 <script src="{{ asset('js/tables.js') }}"></script>
+@if($errors->all())
+    <script>
+        $('.enter').click();
+    </script>
+@endif
