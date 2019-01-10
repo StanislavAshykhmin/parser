@@ -19,11 +19,8 @@ class LoginTest extends TestCase
         $tag = 'Laravel';
         $content = new ParserStackOverflow();
         $records = $content->index($tag);
-        $response = count($records);
-        if ($response == 75) {
-            echo 'Successful';
-            $response->assertSuccessful();
-        }
-        else echo 'Failed';
+        $result = count($records);
+        $this->assertEquals($result, 75);
+
     }
 }
