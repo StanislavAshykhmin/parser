@@ -25,8 +25,6 @@ class DeleteTagTest extends DuskTestCase
                 ->pause(1000)
                 ->click('.sidebar-item .mr-2')
                 ->pause(1000)
-                ->click('.sidebar-item .mr-2')
-                ->pause(1000)
                 ->click('.table tr:nth-child(8) .table-action a')
                 ->pause(1000)
                 ->press('Delete tag')
