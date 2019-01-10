@@ -3,7 +3,7 @@
         <hr/>
         <div class="text-muted text-center">
             <p>
-                &copy; 2019 - <a href="dashboard" class="text-muted">CORPSOFT</a>
+                &copy; 2019 - <a href="https://corpsoft.io/" class="text-muted">CORPSOFT</a>
             </p>
         </div>
     </div>
