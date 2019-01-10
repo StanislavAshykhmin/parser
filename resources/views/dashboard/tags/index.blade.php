@@ -44,7 +44,7 @@
                         </a>
                     </td>
                     <td class="table-action">
-                        <a href="" data-toggle="modal" data-target="#centeredModalDanger"><i
+                        <a href="" data-toggle="modal" data-target="#centeredModalDanger-{{$tag->id}}"><i
                                 class="align-middle fas fa-fw fa-trash"></i></a>
                     </td>
                 </tr>
