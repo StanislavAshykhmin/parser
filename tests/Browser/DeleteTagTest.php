@@ -24,13 +24,13 @@ class DeleteTagTest extends DuskTestCase
                 ->type('email', $user->email)
                 ->type('password', 'corpsoft')
                 ->press('Login')
-                ->pause(1000)
+                ->waitForText('Tags')
                 ->click('.sidebar-item .mr-2')
-                ->pause(1000)
+                ->waitForText('Create tag')
                 ->click('.table tr:nth-child(8) .table-action a')
-                ->pause(1000)
+                ->waitForText('Delete tag')
                 ->press('Delete tag')
-                ->pause(5000)
+                ->waitForText('Tag deleted')
                 ->assertSee('Tag deleted');
         });
     }

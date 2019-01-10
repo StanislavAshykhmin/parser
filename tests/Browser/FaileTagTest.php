@@ -25,14 +25,14 @@ class FaileTagTest extends DuskTestCase
                 ->type('email', $user->email)
                 ->type('password', 'corpsoft')
                 ->press('Login')
-                ->pause(1000)
+                ->waitForText('Tags')
                 ->click('.sidebar-item .mr-2')
-                ->pause(1000)
+                ->waitForText('Create tag')
                 ->press('Create tag')
-                ->pause(1000)
+                ->waitForText('Save tag')
                 ->type('name', 'qwertyuiop')
                 ->press('Save tag')
-                ->pause(5000)
+                ->waitForText('Tag does not exist')
                 ->assertSee('Tag does not exist');
         });
     }

@@ -24,8 +24,8 @@ class GraphicTest extends DuskTestCase
                 ->type('email', $user->email)
                 ->type('password', 'corpsoft')
                 ->press('Login')
-                ->pause(1000)
-                ->press('Print Grafic')
+                ->waitForText('Dashboard')
+                ->press('Print Graphic')
                 ->pause(1000)
                 ->assertVisible('.chart');
         });

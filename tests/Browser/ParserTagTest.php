@@ -24,11 +24,11 @@ class ParserTagTest extends DuskTestCase
                 ->type('email', $user->email)
                 ->type('password', 'corpsoft')
                 ->press('Login')
-                ->pause(1000)
+                ->waitForText('Tags')
                 ->click('.sidebar-item .mr-2')
-                ->pause(1000)
+                ->waitForText('Tags')
                 ->click('.table tr:nth-child(7) td:nth-child(3) a .btn')
-                ->pause(8000)
+                ->waitForText('Parser finish', 10)
                 ->assertSee('Parser finish');
         });
     }
