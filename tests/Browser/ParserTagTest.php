@@ -13,6 +13,8 @@ class ParserTagTest extends DuskTestCase
      * A Dusk test example.
      *
      * @return void
+     * @group regresssion
+     * @group Parser
      */
     public function testExample()
     {

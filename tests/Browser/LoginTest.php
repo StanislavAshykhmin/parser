@@ -11,6 +11,8 @@ class ExampleTest extends DuskTestCase
      * A basic browser test example.
      *
      * @return void
+     * @group regresssion
+     * @group Login
      */
     public function testBasicExample()
     {

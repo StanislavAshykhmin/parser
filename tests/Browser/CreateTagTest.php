@@ -13,6 +13,8 @@ class CreateTagTest extends DuskTestCase
      * A Dusk test example.
      *
      * @return void
+     * @group regresssion
+     * @group Tag
      */
     public function testExample()
     {

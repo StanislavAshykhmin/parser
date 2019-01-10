@@ -7,14 +7,14 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class DeleteTagTest extends DuskTestCase
+class GraphicTest extends DuskTestCase
 {
     /**
      * A Dusk test example.
      *
      * @return void
      * @group regresssion
-     * @group Tag
+     * @group Graphic
      */
     public function testExample()
     {
@@ -25,13 +25,9 @@ class DeleteTagTest extends DuskTestCase
                 ->type('password', 'corpsoft')
                 ->press('Login')
                 ->pause(1000)
-                ->click('.sidebar-item .mr-2')
+                ->press('Print Grafic')
                 ->pause(1000)
-                ->click('.table tr:nth-child(8) .table-action a')
-                ->pause(1000)
-                ->press('Delete tag')
-                ->pause(5000)
-                ->assertSee('Tag deleted');
+                ->assertVisible('.chart');
         });
     }
 }
