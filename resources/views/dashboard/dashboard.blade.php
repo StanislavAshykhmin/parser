@@ -74,7 +74,7 @@
                             @endforeach
                         </select>
                         <button class="btn btn-primary btn-pill float-right" id="tag-button" type="submit">Print
-                            Grafic
+                            Graphic
                         </button>
                     </h5>
                 </div>
