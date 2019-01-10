@@ -48,13 +48,13 @@
                                 class="align-middle fas fa-fw fa-trash"></i></a>
                     </td>
                 </tr>
+                @include('dashboard.popup.delete-tag')
             @endforeach
             </tbody>
         </table>
     </div>
 </div>
 @include('dashboard.popup.create-tag')
-@include('dashboard.popup.delete-tag')
 </div>
 </div>
 </main>
