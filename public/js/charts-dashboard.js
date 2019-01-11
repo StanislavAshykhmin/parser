@@ -6,6 +6,9 @@ $('#tag-button').click(function () {
     console.log(tag);
     console.log(from);
     console.log(before);
+    if (from == "" && before != ""){
+        alert('Enter from!');
+    }
     var url = '/dashboard/graphic/' + tag + '/' + from + '/' + before
     $.ajax({
         url: url,
