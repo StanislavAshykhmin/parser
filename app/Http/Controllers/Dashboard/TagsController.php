@@ -21,7 +21,7 @@ class TagsController extends Controller
         $data = $request->all();
         $content = new ParserStackOverflow();
         $records = $content->index($data['name']);
-        if (count($records) == 75) {
+        if ($records[4] != 0) {
             Tag::create([
                 'name' => $data['name'],
             ]);
