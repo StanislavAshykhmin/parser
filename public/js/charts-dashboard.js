@@ -3,9 +3,6 @@ $('#tag-button').click(function () {
     var tag_name = $("#tag option:selected").text();
     var from = $(".from").val();
     var before = $(".before").val();
-    console.log(tag);
-    console.log(from);
-    console.log(before);
     if (from == "" && before != ""){
         alert('Enter from!');
     }
@@ -13,6 +10,13 @@ $('#tag-button').click(function () {
     $.ajax({
         url: url,
         success: function (result) {
+            if (Math.max.apply(Math, result.count) < 100) {
+                var step = 5;
+            }else if(Math.max.apply(Math, result.count) < 300 ){
+                var step = 20;
+            }else {
+                var step = 50;
+            }
             if (result.countDay < 2) {
                 alert('Not enough data to plot');
             }
@@ -72,7 +76,7 @@ $('#tag-button').click(function () {
                                     labelString: 'Numbers of records'
                                 },
                                 ticks: {
-                                    stepSize: 5
+                                    stepSize: step
                                 },
                                 display: true,
                                 borderDash: [5, 5],
