@@ -9,3 +9,8 @@
         $('.enter').click();
     </script>
 @endif
+@if(session('messageCreateError'))
+    <script>
+        $('.enter').click();
+    </script>
+@endif
