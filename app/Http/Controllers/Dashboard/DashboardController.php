@@ -7,6 +7,7 @@ use App\Model\Dashboard\Tag;
 use App\Model\Parser\Record;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class DashboardController extends Controller
 {
@@ -19,39 +20,25 @@ class DashboardController extends Controller
 
     public function getGraphics($id, $from = null, $before = null)
     {
-        $dates = Record::where([['created_at', '>=', Carbon::now()->startOfMonth()->toDateTimeString()], ['tag_id', $id]])->get();
+        $count = [];
+        $day = [];
         if ($before != null && $from != null) {
-            $dates = Record::where([['created_at', '>=', $from], ['created_at', '<', $before], ['tag_id', $id]])->get();
+            $before = Carbon::parse($before);
+            $from = Carbon::parse($from);
         } elseif ($from != null) {
-            $dates = Record::where([['created_at', '>=', $from], ['tag_id', $id]])->get();
-        } else
-            $dates = Record::where([['created_at', '>=', Carbon::now()->startOfMonth()->toDateTimeString()], ['tag_id', $id]])->get();
-        $last = null;
-        $counter = 1;
-        $total = count($dates);
-        $number = 0;
-        foreach ($dates as $date) {
-            $number++;
-            $result = date_format($date->created_at, 'd');
-            $day[] = $result;
-            if ($result == $last) {
-                $counter++;
-            } else {
-                if ($number != 1) {
-                    $count[] = $counter;
-                }
-                $counter = 1;
-            }
-            if ($number == $total) {
-                $count[] = $counter;
-                $counter = 1;
-            }
-            $last = $result;
+            $before = Carbon::now();
+            $from = Carbon::parse($from);
+        } else{
+            $before = Carbon::now();
+            $from = Carbon::now()->startOfMonth();
         }
-        $day = array_values(array_unique($day));
-        $countDay = count($day);
+        while ($from <= $before) {
+             $count[] = Record::whereDate('created_at', '=', $from->toDateString())->whereTagId($id)->count('id');
+             $day[] = date_format($from, 'd');
+             $from->addDay();
+        }
         if ($count && $day) {
-            return response(['count' => $count, 'day' => $day, 'countDay' => $countDay], 200);
+            return response(['count' => $count, 'day' => $day, 'countDay' => count($day)], 200);
         }
         return response(['message' => 'Error !!'], 422);
     }

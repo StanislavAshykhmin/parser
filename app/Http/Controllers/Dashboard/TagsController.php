@@ -13,7 +13,7 @@ class TagsController extends Controller
 {
     public function index()
     {
-        return view('dashboard.tags.index', ['user' => Auth::user(), 'tags' => Tag::all()]);
+        return view('dashboard.tags.index', ['user' => Auth::user(), 'tags' => Tag::withCount('records')->get()]);
     }
 
     public function store(TagRequest $request)
