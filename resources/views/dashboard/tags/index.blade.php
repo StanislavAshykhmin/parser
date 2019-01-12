@@ -30,7 +30,7 @@
             @foreach($tags as $tag)
                 <tr>
                     <td><a style="text-decoration: none;color: black;"
-                           href="{{route('tag', ['id' => $tag->id])}}">{{$tag->name}}</a></td>
+                           href="{{route('tag', ['id' => $tag->id])}}">{{ucfirst($tag->name)}}</a></td>
                     <td>{{$tag->records_count}}</td>
                     <td><a style="text-decoration: none;color: white;"
                            href="{{route('content', ['name'=>$tag->name])}}">
