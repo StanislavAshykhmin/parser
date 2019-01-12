@@ -27,7 +27,7 @@ class TagsController extends Controller
             ]);
             return redirect()->back()->with('message', 'Tag created');
         } else
-            return redirect()->back()->with('messageCreateError', 'Tag does not exist');
+            return redirect()->back()->with('messageCreateError', 'Tag does not exist. Please enter new tag.');
     }
 
     public function destroy($id)
