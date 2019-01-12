@@ -4,13 +4,9 @@
 <script src="{{ asset('js/forms.js') }}"></script>
 <script src="{{ asset('js/maps.js') }}"></script>
 <script src="{{ asset('js/tables.js') }}"></script>
-@if($errors->all())
+@if($errors->all() || session('messageCreateError'))
     <script>
         $('.enter').click();
     </script>
 @endif
-@if(session('messageCreateError'))
-    <script>
-        $('.enter').click();
-    </script>
-@endif
+
