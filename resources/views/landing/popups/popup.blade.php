@@ -11,32 +11,39 @@
         <div class="row">
             <form class="col s12 popup-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <div class="row">
                 <div class="input-field col s6">
-                    <input name="name" id="name-popup" type="text" class="validate" value="{{old('name')}}">
-                    <label for="name">First Name</label>
+                    <input name="name_popup" id="name-popup" type="text" class="validate" value="{{old('name')}}">
+                    <label for="name_popup">First Name</label>
                     <div class="danger-popup danger-popup-name" style="display:none"></div>
                 </div>
                 <div class="input-field col s6">
-                    <input id="last_name-popup" name="last_name" type="text" class="validate" value="{{old('last_name')}}">
-                    <label for="last_name">Last Name</label>
+                    <input id="last_name-popup" name="last_name_popup" type="text" class="validate" value="{{old('last_name')}}">
+                    <label for="last_name_popup">Last Name</label>
                     <div class="danger-popup danger-popup-last" style="display:none"></div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                    <input id="email-popup" type="email" name="email" class="validate" value="{{old('email')}}">
-                    <label for="email">Email</label>
+                    <input id="email-popup" type="email" name="email_popup" class="validate" value="{{old('email')}}">
+                    <label for="email_popup">Email</label>
                     <div class="danger-popup danger-popup-email" style="display:none"></div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                    <input id="url-popup" type="url" name="url"  class="validate" value="{{old('url')}}">
-                    <label for="url">Link</label>
+                    <input id="url-popup" type="url" name="url_popup"  class="validate" value="{{old('url')}}">
+                    <label for="url_popup">Link</label>
                     <div class="danger-popup danger-popup-url" style="display:none"></div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="input-field col s12">
-                    <textarea id="text-popup" size="3" value="100" name="text" id="icon_prefix2" class="materialize-textarea">{{old('text')}}</textarea>
-                    <label for="icon_prefix2">Enter Your Message</label>
+                    <textarea id="text-popup" size="3" value="100" name="text" id="icon_prefix2_popup" class="materialize-textarea">{{old('text')}}</textarea>
+                    <label for="icon_prefix2_popup">Enter Your Message</label>
                     <div class="danger-popup danger-popup-text" style="display:none"></div>
                 </div>
-                </div>
+            </div>
             <div class="row">
                 <div class="input-send col-lg-12">
                     <button id="submit-popup" type="submit" class="button-send">SEND</button>
