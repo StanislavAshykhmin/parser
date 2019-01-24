@@ -20,7 +20,7 @@ class MailController extends Controller
             $message->contacts()->sync([$email->id =>['status' => StatusType::SentTo]], false);
             }
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Message sent');
     }
 
     public function checkMail($id){

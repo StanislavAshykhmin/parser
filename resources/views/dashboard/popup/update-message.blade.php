@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-label">Label</label>
-                            <input name="label" type="text" class="form-control" autofocus placeholder="Label" value="{{old('label')}}">
+                            <input name="label" type="text" id="label_message" class="form-control" autofocus placeholder="Label" value="{{old('label')}}">
                             @if ($errors->update->has('label'))
                                 <span class="help-block">
                          <strong>{{ $errors->update->first('label') }}</strong>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Title</label>
-                            <input name="title" type="text" class="form-control" placeholder="Title" value="{{old('title')}}">
+                            <input name="title" type="text" class="form-control" id="title_message" placeholder="Title" value="{{old('title')}}">
                             @if ($errors->update->has('title'))
                                 <span class="help-block">
                          <strong>{{ $errors->update->first('title') }}</strong>

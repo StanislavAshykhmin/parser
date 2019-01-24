@@ -25,7 +25,7 @@
                             <h5 class="card-title mb-0">Tags parser</h5>
                         </div>
                         <div class="sidebar-content">
-                            <a href="{{route('tags')}}" class="sidebar-item">
+                            <a href="{{route('tags')}}" class="sidebar-item item2">
                                 <i class="align-middle mr-2 fas fa-fw fa-table"></i></i> <span
                                     class="align-middle">Tags</span>
                             </a>
@@ -36,11 +36,11 @@
                             <h5 class="card-title mb-0">Systems parser</h5>
                         </div>
                         <div class="sidebar-content">
-                            <a href="{{route('systems')}}" class="sidebar-item">
+                            <a href="{{route('systems')}}" class="sidebar-item item3">
                                 <i class="align-middle mr-1 fas fa-fw fa-globe"></i> <span
                                     class="align-middle">Systems</span>
                             </a>
-                            <a href="{{route('message')}}" class="sidebar-item">
+                            <a href="{{route('message')}}" class="sidebar-item item4">
                                 <i class="align-middle mr-1 fas fa-fw fa-envelope"></i> <span
                                     class="align-middle">Messages</span>
                             </a>

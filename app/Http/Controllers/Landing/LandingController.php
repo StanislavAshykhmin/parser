@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Landing;
 
-use App\Http\Requests\ResponseRequest;
 use App\Mail\ResponseMail;
 use App\Model\Response\Response;
 use App\User;

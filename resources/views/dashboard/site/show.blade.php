@@ -11,7 +11,7 @@
         <div class="card-header">
             <h5 class="card-title">
                 Site url:{{$site->url}} Email:{{$contact}}
-                <a href="{{route('sites', ['id' => $site->id])}}" style="text-decoration: none;color: white;">
+                <a href="{{route('systems', ['id' => $site->system_id])}}" style="text-decoration: none;color: white;">
                     <button type="button" class="btn btn-secondary float-right">View all sites</button>
                 </a>
             </h5>
