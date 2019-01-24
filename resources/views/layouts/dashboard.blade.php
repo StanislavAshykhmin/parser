@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Responsive Bootstrap 4 Admin Template">
     <meta name="author" content="Bootlab">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="img/corp-soft.png"/>
     <title>@yield('title')</title>
     @stack('styles')
 </head>

@@ -7,13 +7,14 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{route('create')}}">
+            <form method="post" action="{{route('create')}}">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="modal-body m-3">
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-label">Please enter the full name of the tag for the correct work of the
                                 parser. Example: javascript, not js.</label>
-                            <input name="name" type="text" class="form-control" value="{{old("name")}}" autofocus placeholder="Tag name">
+                            <input name="name" type="text" class="form-control" autofocus placeholder="Tag name">
                             @include('dashboard.notifications.messageCreateError')
                             @if ($errors->has('name'))
                                 <span class="help-block">

@@ -27,7 +27,7 @@ class DeleteTagTest extends DuskTestCase
                 ->waitForText('Tags')
                 ->click('.sidebar-item .mr-2')
                 ->waitForText('Create tag')
-                ->click('.table tr:nth-child(8) .table-action a')
+                ->click('.table tr:nth-last-child(1) .table-action a')
                 ->waitForText('Delete tag')
                 ->press('Delete tag')
                 ->waitForText('Tag deleted')

@@ -7,7 +7,6 @@ use App\Model\Dashboard\Tag;
 use App\Model\Parser\Record;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
 
 class DashboardController extends Controller
 {

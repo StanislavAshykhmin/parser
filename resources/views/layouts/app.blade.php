@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/corp-soft.png"/>
 </head>
 <body>
 <div id="app">
@@ -29,13 +30,13 @@
 
             <!-- Branding Image -->
                 <a class="navbar-brand" href="{{route('dashboard')}}">
-                    <svg class="svg-inline--fa fa-stack-overflow fa-w-12 align-middle mr-2 fa-fw" aria-hidden="true"
-                         data-prefix="fab" data-icon="stack-overflow" role="img" xmlns="http://www.w3.org/2000/svg"
+                    <svg class="svg-inline--fa fa-toolbox fa-w-12 align-middle mr-2 fa-fw" aria-hidden="true"
+                         data-prefix="fab" data-icon="toolbox" role="img" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 384 512" data-fa-i2svg="">
                         <path fill="currentColor"
-                              d="M293.7 300l-181.2-84.5 16.7-36.5 181.3 84.7-16.8 36.3zm48-76L188.2 95.7l-25.5 30.8 153.5 128.3 25.5-30.8zm39.6-31.7L262 32l-32 24 119.3 160.3 32-24zM290.7 311L95 269.7 86.8 309l195.7 41 8.2-39zm31.6 129H42.7V320h-40v160h359.5V320h-40v120zm-39.8-80h-200v39.7h200V360z"></path>
+                              d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37L9.37 214.63c-6 6-9.37 14.14-9.37 22.63V320h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-16c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v16h128v-82.75c0-8.48-3.37-16.62-9.37-22.62zM320 160H192V96h128v64zm64 208c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H192v16c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16v-16H0v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96H384v16z"></path>
                     </svg>
-                    StackOverflow Parser
+                    &nbsp;CORPSOFT Tool
                 </a>
             </div>
 
