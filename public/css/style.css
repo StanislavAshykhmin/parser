@@ -408,6 +408,28 @@ a:not([href]):not([tabindex]):hover{
     .btn_up{
         display: none;
     }
+    nav ul li{
+        background: #000;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        background: #000;
+    }
+    li .nav-item{
+        background: #000;
+    }
+    .modal-window{
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        background-color: #faf6fb;
+        color: #000;
+        z-index: 1100;
+        position: fixed;
+        display: block;
+    }
+
 }
 
 
@@ -499,6 +521,18 @@ header img{
     .navbar-nav .nav-item {
         text-align: center;
     }
+    .btn_up{
+        display: none;
+    }
+    nav ul li{
+        background: #000;
+    }
+    .navbar-dark .navbar-nav .nav-link{
+        background: #000;
+    }
+    li .nav-item{
+        background: #000;
+    }
 }
 
 
@@ -567,9 +601,39 @@ header {
     .tagline {
         font-size: 17px;
     }
+
     .img-holder {
         padding-bottom: 100%;
     }
+
+    header img {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        top: 3.5%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+    }
+
+    .bg-gradient {
+        height: 500px;
+    }
+    header .contact{
+        height: 40px;
+        width: 150px;
+        background:linear-gradient( 122deg, #e54595 0%, #fd378e 100%);
+        font-size: 15px;
+        color:#fff;
+        font-weight: 500;
+        border-radius: 2px;
+        cursor: pointer;
+        border: none;
+        z-index: 1000;
+        margin-top: 50%;
+    }
+
 }
 
 
