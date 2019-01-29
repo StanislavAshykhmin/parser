@@ -996,7 +996,7 @@ div.row{
     li .nav-item{
         background: #000;
     }
-    ..modal-window{
+    .modal-window{
         width: 100% !important;
         max-height: 100%;
         overflow: scroll;
