@@ -271,7 +271,7 @@
     <!-- // end .section -->
 
     <!-- // start .form -->
-    <div class="section light-bg" id="form">
+    <div class="section light-bg">
         <div class="container">
             <div class="section-title">
                 <h3>Fill The Form</h3>
