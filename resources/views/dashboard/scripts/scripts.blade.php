@@ -6,6 +6,12 @@
 <script src="{{ asset('js/tables.js') }}"></script>
 <script src="{{ asset('js/select.js') }}"></script>
 <script src="{{ asset('js/update.js') }}"></script>
+<script>
+    window.addEventListener("beforeunload", function(){
+        $('.splash').addClass('active');
+    });
+
+</script>
 @if($errors->all() || session('messageCreateError'))
     <script>
         $('.enter').click();

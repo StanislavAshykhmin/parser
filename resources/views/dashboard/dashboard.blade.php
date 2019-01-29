@@ -36,7 +36,7 @@
                             <td>
                                 <a href="https://stackoverflow.com/{{$record->url}}"
                                    style="text-decoration: none;color: white;">
-                                    <button type="button" class="btn btn-secondary btn-lg disabled">
+                                    <button type="button" class="btn btn-secondary btn-lg">
                                         Visit
                                     </button>
                                 </a>

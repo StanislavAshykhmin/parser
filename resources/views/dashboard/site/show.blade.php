@@ -11,7 +11,7 @@
         <div class="card-header">
             <h5 class="card-title">
                 Site url:{{$site->url}} Email:{{$contact}}
-                <a href="{{route('systems', ['id' => $site->system_id])}}" style="text-decoration: none;color: white;">
+                <a href="{{route('sites', ['id' => $site->system_id])}}" style="text-decoration: none;color: white;">
                     <button type="button" class="btn btn-secondary float-right">View all sites</button>
                 </a>
             </h5>
@@ -20,7 +20,7 @@
             <thead>
             <tr>
                 <th>Message</th>
-                <th>Status</th>
+                <th>Status <span style="color: red">*</span></th>
             </tr>
             </thead>
             <tbody>
@@ -34,6 +34,7 @@
             </tbody>
         </table>
     </div>
+    @include('dashboard.status.status-message')
 </div>
 </div>
 </div>

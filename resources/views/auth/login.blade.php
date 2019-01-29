@@ -8,7 +8,7 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
-                            <h1 class="h2">Welcome back, CORPSOFT</h1>
+                            <h1 class="h2">Welcome back!</h1>
                             <p class="lead">
                                 Sign in to your account to continue
                             </p>
@@ -17,10 +17,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="m-sm-4">
-                                    <div class="text-center">
-                                        <img src="/img/corp-soft.png" alt="Linda Miller"
-                                             class="img-fluid rounded-circle" width="132" height="132"/>
-                                    </div>
+                                    {{--<div class="text-center">--}}
+                                        {{--<img src="/img/corp-soft.png" alt="Linda Miller"--}}
+                                             {{--class="img-fluid rounded-circle" width="132" height="132"/>--}}
+                                    {{--</div>--}}
                                     <form class="text-center" method="POST" action="{{ route('login') }}">
                                         {{ csrf_field() }}
                                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

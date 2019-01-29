@@ -12,8 +12,8 @@
                 <div class="modal-body m-3">
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="form-label">Label</label>
-                            <input name="label" id="label_message" type="text" class="form-control" autofocus placeholder="Label" value="{{old('label')}}">
+                            <label class="form-label">Topic</label>
+                            <input name="label" id="label_message" type="text" class="form-control" autofocus placeholder="Topic" value="{{old('label')}}">
                             @if ($errors->create->has('label'))
                                 <span class="help-block">
                          <strong>{{ $errors->create->first('label') }}</strong>

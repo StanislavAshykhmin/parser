@@ -29,14 +29,14 @@
             <tbody>
             @foreach($records as $record)
                 <tr>
-                    <td>{{$record->title}}</td>
+                    <td><a style="color: black;" href="https://stackoverflow.com/{{$record->url}}">{{$record->title}}</a></td>
                     <td>{{$record->vote}} @if($record->vote == 1) vote @else votes @endif</td>
                     <td>{{$record->answer}} @if($record->answer == 1) answer @else answers @endif</td>
                     <td>{{$record->view}} @if($record->view == 1) view @else views @endif</td>
                     <td>
                         <a href="https://stackoverflow.com/{{$record->url}}"
                            style="text-decoration: none;color: white;">
-                            <button type="button" class="btn btn-secondary btn-lg disabled">
+                            <button type="button" class="btn btn-secondary btn-lg">
                                 Visit
                             </button>
                         </a>

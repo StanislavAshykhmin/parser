@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TagRequest;
 use App\Model\Dashboard\Tag;
 use App\Model\Parser\Record;
+use Helmesvs\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Auth;
 
 class TagsController extends Controller
@@ -25,7 +26,8 @@ class TagsController extends Controller
             Tag::create([
                 'name' => $data['name'],
             ]);
-            return redirect()->back()->with('message', 'Tag created');
+            Notify::success('Tag created', 'Success', $options = []);
+            return redirect()->back();
         } else
             return redirect()->back()->with('messageCreateError', 'Tag does not exist. Please enter new tag.');
     }
@@ -34,7 +36,8 @@ class TagsController extends Controller
     {
         $tag = Tag::find($id);
         $tag->delete();
-        return redirect()->back()->with('message', 'Tag deleted');
+        Notify::success('Tag deleted', 'Success', $options = []);
+        return redirect()->back();
     }
 
     public function show($id)

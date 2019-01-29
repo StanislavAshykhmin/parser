@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/login');
-});
+
 Route::get('/home', function () {
     return redirect('/dashboard');
 });
@@ -43,5 +41,5 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get('/messages/check/{id}', 'Mail\MailController@checkMail')->name('check');
     Route::post('/landing/contact', 'Landing\LandingController@contact')->name('contact');
-    Route::get('/landing', 'Landing\LandingController@index')->name('landing');
+    Route::get('/', 'Landing\LandingController@index')->name('landing');
 });

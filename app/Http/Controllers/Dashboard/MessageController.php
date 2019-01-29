@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Enums\StatusType;
 use App\Http\Requests\MessageRequest;
-use App\Http\Requests\MessageUpdateRequest;
 use App\Model\Dashboard\Message;
 use App\Model\Dashboard\System;
 use App\User;
 use App\Http\Controllers\Controller;
+use Helmesvs\Notify\Facades\Notify;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
@@ -37,7 +39,8 @@ class MessageController extends Controller
                     ['status' => StatusType::NotSend]);
             }
         }
-        return redirect()->back()->with('message', 'Message created');
+        Notify::success('Message created', 'Success', $options = []);
+        return redirect()->back();
     }
 
     public function edit($id)
@@ -49,9 +52,18 @@ class MessageController extends Controller
         return response(['message' => 'Error !!'], 422);
     }
 
-    public function update(MessageUpdateRequest $request)
+    public function update(Request $request)
     {
         $data = $request->except('_token');
+        $validator = Validator::make($data, [
+            'label'=>'required',
+            'title'=>'required',
+            'text'=>'required',
+            'system_id'=>'required',
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        }
         $message = Message::find($data['id']);
         $message->delete();
         Message::create([
@@ -71,14 +83,16 @@ class MessageController extends Controller
                     ['status' => StatusType::NotSend]);
             }
         }
-        return redirect()->back()->with('message', 'Message updated');
+        return response()->json(['success' => 'Message updated']);
+
     }
 
     public function destroy($id)
     {
         $message = Message::find($id);
         $message->delete();
-        return redirect()->back()->with('message', 'Message deleted');
+        Notify::success('Message deleted', 'Success', $options = []);
+        return redirect()->back();
     }
 
 }

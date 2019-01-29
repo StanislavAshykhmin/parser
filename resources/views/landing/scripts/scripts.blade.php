@@ -1,16 +1,20 @@
 <!-- jQuery and Bootstrap -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
 <!-- Plugins JS -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+
 <!-- Custom JS -->
-<script src="js/script.js"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Enter popup windwo -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-<script src="js/popup-contact.js"></script>
+<script src="{{ asset('js/popup-contact.js') }}"></script>
+
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -143,3 +147,4 @@
         });
     });
 </script>
+

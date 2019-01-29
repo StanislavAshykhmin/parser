@@ -22,7 +22,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Tags parser</h5>
+                            <h5 class="card-title mb-0">Stackoverflow Tags</h5>
                         </div>
                         <div class="sidebar-content">
                             <a href="{{route('tags')}}" class="sidebar-item item2">
@@ -33,7 +33,7 @@
                     </div>
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Systems parser</h5>
+                            <h5 class="card-title mb-0">PHP CMS</h5>
                         </div>
                         <div class="sidebar-content">
                             <a href="{{route('systems')}}" class="sidebar-item item3">
