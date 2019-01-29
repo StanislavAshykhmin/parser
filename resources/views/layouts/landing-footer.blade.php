@@ -1,7 +1,7 @@
 <!-- // end .form -->
 
 
-<div class="section py-5 light-bg" id="contact">
+<div class="section py-5 " id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 text-center">
