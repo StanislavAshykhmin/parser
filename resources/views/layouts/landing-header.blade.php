@@ -19,7 +19,6 @@
                                 <li class="nav-item"> <a class="nav-link active" href="#features">FEATURES <span class="sr-only">(current)</span></a></li>
                                 <li class="nav-item"> <a class="nav-link" href="#aboutus"> ABOUT US</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="#form">TO ORDER</a></li>
                                 <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a></li>
                                 <li class="nav-item"> <button class="btn btn-outline-light my-3 my-sm-0 ml-lg-3 open_popup" id="jsMe">Order Ustugu</button></li>
                             </ul>
