@@ -1,133 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Skyline Ping Email</title>
-    <style type="text/css">
-        @import url(http://fonts.googleapis.com/css?family=Lato:400);
-
-        /* Take care of image borders and formatting */
-
-        img {
-            max-width: 600px;
-            outline: none;
-            text-decoration: none;
-            -ms-interpolation-mode: bicubic;
-        }
-
-        a {
-            text-decoration: none;
-            border: 0;
-            outline: none;
-            color: #21BEB4;
-        }
-
-        a img {
-            border: none;
-        }
-
-        /* General styling */
-
-        td, h1, h2, h3  {
-            font-family: Helvetica, Arial, sans-serif;
-            font-weight: 400;
-        }
-
-        body {
-            -webkit-font-smoothing:antialiased;
-            -webkit-text-size-adjust:none;
-            width: 100%;
-            height: 100%;
-            color: #37302d;
-            background: #ffffff;
-        }
-
-        table {
-            background:
-        }
-
-        h1, h2, h3 {
-            padding: 0;
-            margin: 0;
-            color: #ffffff;
-            font-weight: 400;
-        }
-
-        h3 {
-            color: #21c5ba;
-            font-size: 24px;
-        }
-    </style>
-
-    <style type="text/css" media="screen">
-        @media screen {
-            /* Thanks Outlook 2013! http://goo.gl/XLxpyl*/
-            td, h1, h2, h3 {
-                font-family: 'Lato', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-            }
-        }
-    </style>
-
-    <style type="text/css" media="only screen and (max-width: 480px)">
-        /* Mobile styles */
-        @media only screen and (max-width: 480px) {
-            table[class="w320"] {
-                width: 320px !important;
-            }
-
-            table[class="w300"] {
-                width: 300px !important;
-            }
-
-            table[class="w290"] {
-                width: 290px !important;
-            }
-
-            td[class="w320"] {
-                width: 320px !important;
-            }
-
-            td[class="mobile-center"] {
-                text-align: center !important;
-            }
-
-            td[class="mobile-padding"] {
-                padding-left: 20px !important;
-                padding-right: 20px !important;
-                padding-bottom: 20px !important;
-            }
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Letter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Dancing+Script|Indie+Flower|Lobster|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Cookie|Frank+Ruhl+Libre|Rambla|Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/Users_Letter.css">
 </head>
-<body class="body" style="padding:0; margin:0; display:block; background:#ffffff; -webkit-text-size-adjust:none" bgcolor="#ffffff">
-<table align="center" cellpadding="0" cellspacing="0" width="100%" height="100%" >
-    <tr>
-        <td align="center" valign="top" bgcolor="#ffffff"  width="100%">
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12 logo">
+                    <img src="images/Logo_TV_2015.svg.png">
+                </div>
+            </div>
+            <p class="line"> </p>
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <img src="images/how-to-migrate-sites-google-760x400.png" class="main-foto">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12 text">
+                    <p class="title_text">{{$title}}</p>
+                    <p class="line"> </p>
+                    <section>
+                        <p class="second-text">{{$text}}</p>
+                    </section>
 
-            <table cellspacing="0" cellpadding="0" width="100%">
-                <tr>
-                    <td style="border-bottom: 3px solid #3bcdc3;" width="100%">
-                        <center>
-                            <table cellspacing="0" cellpadding="0" width="500" class="w320">
-                                <tr>
-                                    <td valign="top" style="padding:10px 0; text-align:left;" class="mobile-center">
-                                        <img width="250" height="62" src="https://www.filepicker.io/api/file/TtSuN5UdTmO0NXWPfYCJ">
-                                    </td>
-                                </tr>
-                            </table>
-                        </center>
-                    </td>
-                </tr>
-                <tr>
-                    <td background="https://www.filepicker.io/api/file/zLBr1W6UT6qZP4jI2yRz" bgcolor="#64594b" valign="top" style="background: url(https://www.filepicker.io/api/file/zLBr1W6UT6qZP4jI2yRz) no-repeat center; background-color: #64594b; background-position: center;">
-                        <div>
-                            <center>
-                                <table cellspacing="0" cellpadding="0" width="530" height="303" class="w320">
-                                    <tr>
-                                        <td valign="middle" style="vertical-align:middle; padding-right: 15px; padding-left: 15px; text-align:left;" class="mobile-center" height="303">
-                                            <img src="{{route('check', ['id' => $id])}}" alt="" width="1" height="1" border="0">
-                                            <h1>{{$title}}</h1>
+                    <br />
+                    <p class="line"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-12 text-center button">
+                    <a class="mcnButton" href="#" target="_blank" rel="noopener noreferrer" data-title="получить">получить
+                        <span>&gt;</span>
+                    </a>
+                </div>
+                <p class="line"></p>
+            </div>
+            <img src="{{route('check', ['id' => $id])}}" alt="" width="1" height="1" border="0">
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p align="center"><b><em>Это рекламное сообщени от партнера Logo.com</em></b></p>
+                    <p><b><em>Email:</em></b>&nbsp;<span>stepankiryanenko@gmail.com</span></p>
+                    <p><b><em>Наш сайт:</em></b>&nbsp;<span><a href="#">www.youtube.com</a></p>
+                    <p class="our_target">Наша цель-предоставить пользователям полезную информацию абсолютно бесплатно</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+                                            <h1></h1>
 
                                         </td>
                                     </tr>
@@ -153,7 +98,7 @@
                                                     <br>
                                                     <br>
 
-                                                    {{$text}}
+
 
                                                 </td>
                                             </tr>
