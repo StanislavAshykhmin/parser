@@ -271,10 +271,9 @@
     <!-- // end .section -->
 
     <!-- // start .form -->
-    <div class="section light-bg">
+    <div class="section light-bg" id="form">
         <div class="container">
             <div class="section-title">
-                <small>FORM</small>
                 <h3>Fill The Form</h3>
                 <div class="success-contact" style="display:none"></div>
             </div>
@@ -321,6 +320,8 @@
                     </div>
                 </form>
             </div>
+
+        </div>
     </div>
 @endsection
 @push('scripts')
