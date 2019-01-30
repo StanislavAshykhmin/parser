@@ -15,7 +15,7 @@ class MailController extends Controller
         $message = Message::find($id);
         $emails = $message->contacts;
         foreach ($emails as $email){
-            Mail::to($email['email'])->queue(new SendMail($email, $message));
+            Mail::to($email['email'])->send(new SendMail($email, $message));
             $site = Contact::where('id', $email->id)->first()->site->update(['status' => StatusType::Processed]);
             $message->contacts()->sync([$email->id =>['status' => StatusType::SentTo]], false);
             }
