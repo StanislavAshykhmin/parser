@@ -1,8 +1,8 @@
 <div class="splash active">
     <div class="splash-icon"></div>
 </div>
-
 <nav class="navbar navbar-expand navbar-dark bg-dark">
+    {!! Notify::render() !!}
     <div class="container">
         <a class="navbar-brand" href="{{route('dashboard')}}">
             <svg class="svg-inline--fa fa-toolbox fa-w-12 align-middle mr-2 fa-fw" aria-hidden="true"

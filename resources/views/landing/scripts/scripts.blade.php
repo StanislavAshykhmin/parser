@@ -1,55 +1,20 @@
 <!-- jQuery and Bootstrap -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+
 <!-- Plugins JS -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+
 <!-- Custom JS -->
-<script src="js/script.js"></script>
+<script src="{{ asset('js/script.js') }}"></script>
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!-- Enter popup windwo -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-<script type="text/javascript">
-    $('.open_popup').click(function(){
-        $('.overlay').fadeIn();
-    });
+<script src="{{ asset('js/popup-contact.js') }}"></script>
 
-    //закрыть на крестик
-    $('.js-close-campaign').click(function() {
-        $('.overlay').fadeOut();
-
-    });
-    $(document).one('keydown', function(e){
-        if (e.keyCode == 27) {
-            js-overlay.close()
-        }
-    });
-    //кнопка для скрола (.btn_up)
-
-    $('body').append('<button class="btn_up" />');
-
-    $('.btn_up').click(function(){
-        $('body').animate({'scrollTop': 0}, 1000);
-        $('html').animate({'scrollTop': 0}, 1000);
-    });
-
-    $(window).scroll(function(){
-        if ($(window).scrollTop() > 200) {
-            $('.btn_up').addClass('active');
-        }
-        else{
-            $('.btn_up').removeClass('active');
-        }
-    });
-
-
-    // закрыть по клику вне окна
-    // $(".js-overlay").on('click', function() {
-    //  $('.modal-window').fadeOut(300);
-    // }
-    // });
-</script>
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -182,3 +147,4 @@
         });
     });
 </script>
+

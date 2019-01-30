@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Landing;
 
-use App\Http\Requests\ResponseRequest;
 use App\Mail\ResponseMail;
 use App\Model\Response\Response;
 use App\User;
@@ -39,7 +38,7 @@ class LandingController extends Controller
                 'url' => $data['url'],
                 'text' => $data['text'],
             ]);
-            Mail::to($user->email)->queue(new ResponseMail($data));
+            Mail::to($user->email)->send(new ResponseMail($data));
             return response()->json(['success' => 'Thanks you. We will contact you within 24 hours.']);
         }
     }

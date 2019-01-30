@@ -12,8 +12,8 @@
                 <div class="modal-body m-3">
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="form-label">Label</label>
-                            <input name="label" type="text" class="form-control" autofocus placeholder="Label" value="{{old('label')}}">
+                            <label class="form-label">Topic</label>
+                            <input name="label" id="label_message" type="text" class="form-control" autofocus placeholder="Topic" value="{{old('label')}}">
                             @if ($errors->create->has('label'))
                                 <span class="help-block">
                          <strong>{{ $errors->create->first('label') }}</strong>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label">Title</label>
-                            <input name="title" type="text" class="form-control" placeholder="Title" value="{{old('title')}}">
+                            <input name="title" type="text" id="title_message" class="form-control" placeholder="Title" value="{{old('title')}}">
                             @if ($errors->create->has('title'))
                                 <span class="help-block">
                          <strong>{{ $errors->create->first('title') }}</strong>
@@ -53,8 +53,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save tag</button>
+                    <button type="button" class="btn btn-secondary close-message-popup" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save message</button>
                 </div>
             </form>
         </div>

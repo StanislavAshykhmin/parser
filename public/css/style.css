@@ -7,14 +7,14 @@ Version : 1.0
 Author  : Surjith S M
 URI     : https://surjithctly.in/
 
-Copyright © All rights Reserved 
+Copyright © All rights Reserved
 
 */
 
 
 /*------------------------
 [TABLE OF CONTENTS]
-    
+
 1. GLOBAL STYLES
 2. NAVBAR
 3. HERO
@@ -127,11 +127,11 @@ p.lead {
 
 .btn-outline-light:hover {
     color: #fff;
-    background:#fff; 
+    background:#fff;
 }
 
 .btn:hover{
-    background-color: #fff; 
+    background-color: #fff;
 }
 
 .btn-primary {
@@ -1089,6 +1089,7 @@ div.row{
     }
 
     /*header img {*/
+<<<<<<< HEAD
         /*position: absolute;*/
         /*z-index: 2;*/
         /*width: 100%;*/
@@ -1097,6 +1098,16 @@ div.row{
         /*right: 0;*/
         /*bottom: 0;*/
         /*max-width: 100%;*/
+=======
+    /*position: absolute;*/
+    /*z-index: 2;*/
+    /*width: 100%;*/
+    /*top: 3.5%;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*max-width: 100%;*/
+>>>>>>> 124651c5eb3308ff4b8ffc4da0de486863e53c81
     /*}*/
 
     .bg-gradient {

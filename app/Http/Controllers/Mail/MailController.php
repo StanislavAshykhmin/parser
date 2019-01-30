@@ -7,6 +7,7 @@ use App\Mail\SendMail;
 use App\Model\Parser\Contact;
 use App\Model\Dashboard\Message;
 use App\Http\Controllers\Controller;
+use Helmesvs\Notify\Facades\Notify;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
@@ -19,7 +20,7 @@ class MailController extends Controller
             $site = Contact::where('id', $email->id)->first()->site->update(['status' => StatusType::Processed]);
             $message->contacts()->sync([$email->id =>['status' => StatusType::SentTo]], false);
             }
-
+        Notify::success('Message sent', 'Success', $options = []);
         return redirect()->back();
     }
 

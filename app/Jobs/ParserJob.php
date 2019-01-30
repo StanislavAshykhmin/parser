@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Helpers\ParserStackOverflow;
 use App\Model\Dashboard\Tag;
+use Helmesvs\Notify\Facades\Notify;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
@@ -45,6 +46,7 @@ class ParserJob implements ShouldQueue
                     'answer' => $record['answer'],
                     'view' => $record['view'],
                     'url' => $record['link'],
+                    'parser_date' => $record['parser_date']
                 ]);
         }
     }

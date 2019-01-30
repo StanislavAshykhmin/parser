@@ -1,5 +1,6 @@
-$(function () {
-    $('.update').on('click', function (e) {
+
+$(function e() {
+    $('.class-update').on('click', function (e) {
         e.preventDefault()
         var options = $('#system_id option');
         var value = $.map(options, function (option) {

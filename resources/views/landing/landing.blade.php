@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 @section('title', 'Landing')
 @push('styles')
-    @include('landing.styles.styles')
+@include('landing.styles.styles')
 @endpush
 </head>
 @section('content')
@@ -302,7 +302,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="url" type="url" name="url" class="validate" value="{{old('url')}}">
-                            <label for="email">Link</label>
+                            <label for="url">Link</label>
                             <div class="danger-contact danger-contact-url" style="display:none"></div>
                         </div>
                     </div>

@@ -36,6 +36,9 @@ class ParserStackOverflow
             $views = $crawler->filter('.views')->each(function ($node) {
                 return $node->text();
             });
+            $date = $crawler->filter('.user-action-time span')->each(function ($node) {
+                return $node->attr('title');
+            });
             for ($id = 0; $id < 15; $id++) {
                 if (!empty($links[$id])) {
                     $result['link'] = $links[$id];
@@ -43,6 +46,7 @@ class ParserStackOverflow
                     $result['vote'] = trim(str_replace(["\r\n", "votes", "vote"], '', $vote[$id]));
                     $result['answer'] = trim(str_replace(["\r\n", "answers", "answer"], '', $answers[$id]));
                     $result['view'] = trim(str_replace(["\r\n", "views", "view"], '', $views[$id]));
+                    $result['parser_date'] = trim(str_replace("Z", '', $date[$id]));
                     $fullResult[] = $result;
                 } else {
                     $fullResult[] = 0;

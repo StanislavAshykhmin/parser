@@ -14,6 +14,6 @@ class CmsController extends Controller
     }
 
     public function show($id){
-        return view('dashboard.systems.show', ['system' => System::find($id), 'sites' => Site::where('system_id', $id)->get(), 'user' => User::find(1)]);
+        return view('dashboard.systems.show', ['system' => System::find($id), 'sites' => Site::where('system_id', $id)->orderBy('status', 'desc')->orderByRaw("FIELD(lang , 'en-US', 'en') desc")->paginate(6), 'user' => User::find(1)]);
     }
 }

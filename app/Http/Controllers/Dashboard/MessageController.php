@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Enums\StatusType;
 use App\Http\Requests\MessageRequest;
-use App\Http\Requests\MessageUpdateRequest;
 use App\Model\Dashboard\Message;
 use App\Model\Dashboard\System;
 use App\User;
 use App\Http\Controllers\Controller;
+use Helmesvs\Notify\Facades\Notify;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
@@ -37,7 +39,8 @@ class MessageController extends Controller
                     ['status' => StatusType::NotSend]);
             }
         }
-        return redirect()->back()->with('message', 'Message created');
+        Notify::success('Message created', 'Success', $options = []);
+        return redirect()->back();
     }
 
     public function edit($id)
@@ -49,36 +52,46 @@ class MessageController extends Controller
         return response(['message' => 'Error !!'], 422);
     }
 
-    public function update(MessageUpdateRequest $request)
+    public function update(Request $request)
     {
         $data = $request->except('_token');
-        $message = Message::find($data['id']);
-        $message->delete();
-        Message::create([
-            'label' => $data['label'],
-            'title' => $data['title'],
-            'text' => $data['text'],
+        $validator = Validator::make($data, [
+            'label'=>'required',
+            'title'=>'required',
+            'text'=>'required',
+            'system_id'=>'required',
         ]);
+        if ($validator->fails()) {
+            return response()->json(['errors' => $validator->errors()->all()]);
+        }
+        $message = Message::find($data['id']);
+        $message->systems()->detach();
+        $message->contacts()->detach();
+        $message->label = $data['label'];
+        $message->title = $data['title'];
+        $message->text = $data['text'];
+        $res = $message->saveMessage()->save($message);
+
         foreach ($data['system_id'] as $system) {
             $emails = System::where('id', $system)->first()->contacts;
-            $save = Message::where('label', $data['label'])->first();
-            $save->systems()->attach(
+            $message->systems()->attach(
                 ['system_id' => $system]
             );
             foreach ($emails as $email) {
-                $save->contacts()->attach(
+                $message->contacts()->attach(
                     ['contact_id' => $email->id],
                     ['status' => StatusType::NotSend]);
             }
         }
-        return redirect()->back()->with('message', 'Message updated');
+        return response()->json(['success' => 'Message updated']);
     }
 
     public function destroy($id)
     {
         $message = Message::find($id);
         $message->delete();
-        return redirect()->back()->with('message', 'Message deleted');
+        Notify::success('Message deleted', 'Success', $options = []);
+        return redirect()->back();
     }
 
 }

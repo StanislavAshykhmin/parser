@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Record extends Model
 {
-    protected $fillable = ['title', 'vote', 'answer', 'view', 'url', 'tag_id'];
+    protected $fillable = ['title', 'vote', 'answer', 'view', 'url', 'tag_id', 'parser_date'];
 
 
     public function tag()

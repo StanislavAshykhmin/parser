@@ -22,28 +22,21 @@
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Parser</th>
-                <th>Action</th>
-                <th>Delete</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             @foreach($tags as $tag)
                 <tr>
-                    <td><a style="text-decoration: none;color: black;"
+                    <td><a style="color: black;"
                            href="{{route('tag', ['id' => $tag->id])}}">{{ucfirst($tag->name)}}</a></td>
                     <td>{{$tag->records_count}}</td>
                     <td><a style="text-decoration: none;color: white;"
                            href="{{route('content', ['name'=>$tag->name])}}">
                             <button class="btn btn-success">Parser now</button>
                         </a></td>
-                    <td>
-                        <a style="text-decoration: none;color: black;" href="{{route('tag', ['id' => $tag->id])}}">
-                            <button type="button" class="btn btn-secondary btn-lg disabled">
-                                View
-                            </button>
-                        </a>
-                    </td>
                     <td class="table-action">
+                        <a href="{{route('tag', ['id' => $tag->id])}}"><i class="align-middle fas fa-fw fa-eye"></i></a>
                         <a href="" data-toggle="modal" data-target="#centeredModalDanger-{{$tag->id}}"><i
                                 class="align-middle fas fa-fw fa-trash"></i></a>
                     </td>
