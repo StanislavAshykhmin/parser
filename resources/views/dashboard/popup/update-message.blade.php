@@ -15,17 +15,17 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-label">Topic</label>
-                            <input name="label" type="text" id="label_message123" class="form-control" autofocus placeholder="Topic" value="{{old('label')}}">
+                            <input name="label" type="text" id="label_message123" class="form-control" autofocus placeholder="Topic" value="">
                             <div class="danger-popup danger-popup-label" style="display:none; color: red;"></div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Title</label>
-                            <input name="title" type="text" class="form-control" id="title_message123" placeholder="Title" value="{{old('title')}}">
+                            <input name="title" type="text" class="form-control" id="title_message123" placeholder="Title" value="">
                             <div class="danger-popup danger-popup-title" style="display:none; color: red;"></div>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Text</label>
-                            <textarea id="text_message" name="text" class="form-control" placeholder="Text">{{old('text')}}</textarea>
+                            <textarea id="text_message" name="text" class="form-control" placeholder="Text"></textarea>
                             <div class="danger-popup danger-popup-text" style="display:none; color: red;"></div>
                         </div>
                         <div class="form-group">
@@ -53,7 +53,7 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
-        $('#update-submit').click(function(e){
+        $('#update-submit').on('click', function(e){
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -70,6 +70,14 @@
                     text: $('#text_message').val(),
                     system_id: $('#system_id').val(),
                 },
+                beforeSend: function() {
+                    $('.splash').addClass('active');
+                    $('#update-message').hide();
+                },
+                complete: function() {
+                    // $('.splash').removeClass('active');
+                    $('#update-message').show();
+                },
                 success: function(data){
                     $(data.success, function () {
                         $('.danger-popup').html('');
@@ -78,14 +86,11 @@
                         $('.success-popup-update').append('<p>'+data.success+'</p>');
                         setTimeout(function(){
                             $('#close').click();
-                        }, 4000);
-                        setTimeout(function(){
                             $('.success-popup-update').html('');
                             $('.success-popup-update').hide();
-                            // location.reload();
-                            $(".table-content").load("{{route('message')}} .table");
-                        }, 4000);
-
+                            {{--$(".table-content").load("{{route('message')}} .table");--}}
+                            location.reload();
+                        }, 3000);
 
                     })
                     $('.danger-popup').hide();

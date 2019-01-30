@@ -5,9 +5,10 @@
 <script src="{{ asset('js/maps.js') }}"></script>
 <script src="{{ asset('js/tables.js') }}"></script>
 <script src="{{ asset('js/select.js') }}"></script>
-<script src="{{ asset('js/update.js') }}"></script>
+<script async src="{{ asset('js/update.js') }}"></script>
 <script>
     window.addEventListener("beforeunload", function(){
+        $('#create-message').hide();
         $('.splash').addClass('active');
     });
 

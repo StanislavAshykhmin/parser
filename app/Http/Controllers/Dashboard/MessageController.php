@@ -65,26 +65,25 @@ class MessageController extends Controller
             return response()->json(['errors' => $validator->errors()->all()]);
         }
         $message = Message::find($data['id']);
-        $message->delete();
-        Message::create([
-            'label' => $data['label'],
-            'title' => $data['title'],
-            'text' => $data['text'],
-        ]);
+        $message->systems()->detach();
+        $message->contacts()->detach();
+        $message->label = $data['label'];
+        $message->title = $data['title'];
+        $message->text = $data['text'];
+        $res = $message->saveMessage()->save($message);
+
         foreach ($data['system_id'] as $system) {
             $emails = System::where('id', $system)->first()->contacts;
-            $save = Message::where('label', $data['label'])->first();
-            $save->systems()->attach(
+            $message->systems()->attach(
                 ['system_id' => $system]
             );
             foreach ($emails as $email) {
-                $save->contacts()->attach(
+                $message->contacts()->attach(
                     ['contact_id' => $email->id],
                     ['status' => StatusType::NotSend]);
             }
         }
         return response()->json(['success' => 'Message updated']);
-
     }
 
     public function destroy($id)

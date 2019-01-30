@@ -3,7 +3,6 @@
 @push('styles')
     @include('dashboard.styles.styles')
 @endpush
-<body>
 @section('content')
 </div>
 <div class="col-12 col-xl-10">
@@ -37,7 +36,7 @@
                     <td class="table-action enter-update"  data-id="{{$message->id}}">
                         <a href="" data-toggle="modal" data-target="#view-message-{{$message->id}}"><i class="align-middle fas fa-fw fa-eye"></i></a>
 
-                        <a href="" class="update" data-toggle="modal" data-target="#update-message" data-url="{{route('edit', ['id' => $message->id])}}"><i class="align-middle fas fa-fw fa-pen"></i></a>
+                        <a href="" class="class-update" data-toggle="modal" data-target="#update-message" data-url="{{route('edit', ['id' => $message->id])}}"><i class="align-middle fas fa-fw fa-pen"></i></a>
                         <a href="" data-toggle="modal" data-target="#delete-message-{{$message->id}}"><i
                                 class="align-middle fas fa-fw fa-trash"></i></a>
                     </td>

@@ -1,5 +1,5 @@
-<main class="content">
-    <div class="container">
+<main class="content full-content">
+    <div class="container full-container">
         <div class="row">
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
                 <a class="card d-block d-md-none mt-4" data-toggle="collapse" data-target="#sidebar">

@@ -15,12 +15,12 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link active" href="#home">HOME <span class="sr-only">(current)</span> </a> </li>
-                                <li class="nav-item"> <a class="nav-link active" href="#features">FEATURES <span class="sr-only">(current)</span> </a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#aboutus"> ABOUT US</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
-                                <li class="nav-item"> <button class="btn btn-outline-light my-3 my-sm-0 ml-lg-3 open_popup">Order Ustugu</button></li>
+                                <li class="nav-item"><a class="nav-link active" href="#home">HOME<span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"> <a class="nav-link active" href="#features">FEATURES <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#aboutus"> ABOUT US</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#pricing">PRICING</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a></li>
+                                <li class="nav-item"> <button class="btn btn-outline-light my-3 my-sm-0 ml-lg-3 open_popup" id="jsMe">Order Ustugu</button></li>
                             </ul>
                         </div>
                     </nav>
@@ -31,16 +31,26 @@
     </div>
 
     <header class="bg-gradient" id="home">
-        <div>
-            <img src="images/Data-Migration.png">
-        </div>
 
-        <div class="container mt-5">
-            <h1>MIGRATION</h1>
-            <p class="tagline">It`s not just for birds</p>
-        </div>
-        <div class="container mt-5">
-            <button type="button" class="btn btn-warning contact open_popup">CONTACT US</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>MIGRATION</h1>
+                </div>
+                <div class="col-lg-12">
+                    <p class="tagline">It`s not just for birds</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <img src="images/Data-Migration.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-warning contact open_popup">CONTACT US</button>
+                </div>
+            </div>
         </div>
 
     </header>
