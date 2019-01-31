@@ -27,7 +27,6 @@
 <!-- // end .section -->
 
 
-
 <footer class="my-5  text-center">
     <!-- Copyright removal is not prohibited! -->
     <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY COLORLIB</small></p>
