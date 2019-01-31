@@ -26,7 +26,10 @@
 
 <!-- // end .section -->
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 124651c5eb3308ff4b8ffc4da0de486863e53c81
 <footer class="my-5  text-center">
     <!-- Copyright removal is not prohibited! -->
     <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY COLORLIB</small></p>
