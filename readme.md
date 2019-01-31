@@ -10,12 +10,11 @@
 ## Get Started Tool
 
 1. "git clone https://github.com/StanislavAshykhmin/parser.git" - clone with https or "git clone git@github.com:StanislavAshykhmin/parser.git" - clone with SSH;
-2. "touch .env" - create file .env at the root of the parser folder;
-3. "cp .env.example to .env" - copy basic settings;
-4. "docker-compose up -d --build" - create docker container;
-5. "docker exec -it parser-web-container bash" - open container;
-6. "composer install" - install packages;
-7. "chown -R www-data:www-data ." - opening access to reading;
-8.  "php artisan key:generate" - generate key;
-9. "php artisan migrate" - create table on data base;
-10. "php artisan db:seed" - seeding table.
+2. "cp .env.example to .env" - copy basic settings;
+3. "docker-compose up -d --build" - create docker container;
+4. "docker exec -it parser-web-container bash" - open container;
+5. "composer install" - install packages;
+6. "chown -R www-data:www-data ." - opening access to reading;
+7.  "php artisan key:generate" - generate key;
+8. "php artisan migrate" - create table on data base;
+9. "php artisan db:seed" - seeding table.
