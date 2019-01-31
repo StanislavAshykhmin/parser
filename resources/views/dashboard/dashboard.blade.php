@@ -11,7 +11,7 @@
         <div class="col-12 col-lg-12 col-xxl-9 d-flex">
             <div class="card flex-fill">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Top questions today!</h5>
+                    <h5 class="card-title mb-0">Top questions today</h5>
                 </div>
                 <table id="datatables-dashboard" class="table table-striped my-0">
                     <thead>
