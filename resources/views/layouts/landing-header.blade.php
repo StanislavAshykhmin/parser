@@ -43,7 +43,7 @@
             </div>
             <div class="row">
                 <div class="col-xl-12">
-                    <img src="images/Data-Migration.png">
+                    <img src="images/финиш.png">
                 </div>
             </div>
             <div class="row">

@@ -182,7 +182,7 @@
                         <div class="line-price"></div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">2 Sites</div>
+                        <div class="list-group-item">2 Pages</div>
                         <div class="list-group-item">15 GB SSD</div>
                         <div class="list-group-item">192 MB of memory for PHP</div>
                         <!--   <div class="list-group-item">cPanel</div>
@@ -203,7 +203,7 @@
                         <div class="line-price"></div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">15 Sites</div>
+                        <div class="list-group-item">15 Pages</div>
                         <div class="list-group-item">15 GB SSD</div>
                         <div class="list-group-item">192 MB of memory for PHP</div>
                         <!--<div class="list-group-item">cPanel</div>
@@ -224,7 +224,7 @@
                         <div class="line-price"></div>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">25 Sites</div>
+                        <div class="list-group-item">25 Pages</div>
                         <div class="list-group-item">25 GB SSD</div>
                         <div class="list-group-item">192 MB of memory for PHP</div>
                         <!--- <div class="list-group-item">cPanel</div>
