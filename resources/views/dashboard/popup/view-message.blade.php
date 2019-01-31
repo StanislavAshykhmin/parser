@@ -10,7 +10,7 @@
                 <div class="modal-body m-3">
                     <div class="card-body">
                         <div class="form-group">
-                            <label class="form-label">Label: {{$message->label}}</label>
+                            <label class="form-label">Topic: {{$message->label}}</label>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Title: {{$message->title}}</label>

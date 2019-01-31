@@ -6,10 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model
 {
-    protected $fillable = ['name'];
-    protected $with = [
-//        'records',
-    ];
+    protected $fillable = ['name',];
 
     public function records()
     {

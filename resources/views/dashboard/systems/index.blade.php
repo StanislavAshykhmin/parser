@@ -18,14 +18,23 @@
             <tr>
                 <th>Name</th>
                 <th>Quantity</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
 @foreach($allCms as $cms)
                 <tr>
-                    <td><a style="text-decoration: none;color: black;"
+                    <td><a style="color: black;"
                            href="{{route('sites', ['id' => $cms->id])}}">{{$cms->name}}</a></td>
                     <td>{{$cms->sites_count}}</td>
+                    <td>
+                        <a href="{{route('sites', ['id' => $cms->id])}}"
+                           style="text-decoration: none;color: white;">
+                            <button type="button" class="btn btn-secondary btn-lg">
+                                Visit
+                            </button>
+                        </a>
+                    </td>
                 </tr>
 @endforeach
             </tbody>

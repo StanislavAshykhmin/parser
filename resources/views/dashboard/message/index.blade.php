@@ -3,7 +3,6 @@
 @push('styles')
     @include('dashboard.styles.styles')
 @endpush
-<body>
 @section('content')
 </div>
 <div class="col-12 col-xl-10">
@@ -17,43 +16,39 @@
             </h5>
             @include('dashboard.notifications.message')
         </div>
-        <table class="table table-striped">
+        <div class="table-content">
+        <table class="table table-striped" style="margin-bottom: 0">
             <thead>
             <tr>
-                <th>Label</th>
-                <th>View</th>
-                <th>Update</th>
-                <th>Delete</th>
+                <th>Topic</th>
                 <th>Mail</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
             @foreach($messages as $message)
                 <tr>
                     <td>{{$message->label}}</td>
-                    <td class="table-action">
-                        <a href="" data-toggle="modal" data-target="#view-message-{{$message->id}}"><i class="align-middle fas fa-fw fa-eye"></i></a>
-                    </td>
-                    <td class="table-action enter-update"  data-id="{{$message->id}}">
-                        <a href="" class="update" data-toggle="modal" data-target="#update-message" data-url="{{route('edit', ['id' => $message->id])}}"><i class="align-middle fas fa-fw fa-pen"></i></a>
-                    </td>
-                    <td class="table-action">
-                        <a href="" data-toggle="modal" data-target="#delete-message-{{$message->id}}"><i
-                                class="align-middle fas fa-fw fa-trash"></i></a>
-                    </td>
                     <td><a style="text-decoration: none;color: white;"
                            href="{{route('send', ['id' => $message->id])}}">
                             <button class="btn btn-success">Send mail</button>
                         </a></td>
+                    <td class="table-action enter-update"  data-id="{{$message->id}}">
+                        <a href="" data-toggle="modal" data-target="#view-message-{{$message->id}}"><i class="align-middle fas fa-fw fa-eye"></i></a>
+
+                        <a href="" class="class-update" data-toggle="modal" data-target="#update-message" data-url="{{route('edit', ['id' => $message->id])}}"><i class="align-middle fas fa-fw fa-pen"></i></a>
+                        <a href="" data-toggle="modal" data-target="#delete-message-{{$message->id}}"><i
+                                class="align-middle fas fa-fw fa-trash"></i></a>
+                    </td>
                 </tr>
                 @include('dashboard.popup.delete-message')
                 @include('dashboard.popup.view-message')
             @endforeach
             </tbody>
         </table>
+        </div>
     </div>
 </div>
-
 @include('dashboard.popup.create-message')
 @include('dashboard.popup.update-message')
 </div>

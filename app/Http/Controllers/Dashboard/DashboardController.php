@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function index()
     {
         $tags = Tag::all();
-        $records = Record::where([['tag_id', '>', 0], ['created_at', '>', Carbon::now()->startOfDay()]])->orderBy('view', 'desc')->limit(5)->get();
+        $records = Record::where([['tag_id', '>', 0], ['parser_date', '>', Carbon::now()->startOfDay()]])->orderBy('view', 'desc')->limit(5)->get();
         return view('dashboard.dashboard', ['user' => Auth::user(), 'records' => $records, 'tags' => $tags]);
     }
 
@@ -32,7 +32,7 @@ class DashboardController extends Controller
             $from = Carbon::now()->startOfMonth();
         }
         while ($from <= $before) {
-             $count[] = Record::whereDate('created_at', '=', $from->toDateString())->whereTagId($id)->count('id');
+             $count[] = Record::whereDate('parser_date', '=', $from->toDateString())->whereTagId($id)->count('id');
              $day[] = date_format($from, 'd');
              $from->addDay();
         }

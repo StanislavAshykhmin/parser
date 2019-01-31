@@ -1,41 +1,38 @@
-$(document).ready(function(){
-    $('#submit-popup').click(function(e){
-
-        e.preventDefault();
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('input[name="_token"]').attr('value')
-            }
-        });
-        $.ajax({
-            url: "{{route('contact')}}",
-            method: 'post',
-            data: {
-                name: $('#name').val(),
-                last_name: $('#last_name').val(),
-                email: $('#email').val(),
-                url: $('#url').val(),
-                text: $('#text').val(),
-            },
-            success: function(data){
-                $(data.success, function () {
-                    $('.alert-danger').html('');
-                    $('.alert-danger').hide();
-                    $('.alert-success').show();
-                    $('.alert-success').append('<p>'+data.success+'</p>');
-                    setTimeout(function(){
-                        $('.close-popup').click();
-                    }, 3000);
-
-                })
-                $('.alert-danger').html('');
-                $.each(data.errors, function(key, value){
-                    console.log(value);
-                    $('.alert-danger').show();
-                    $('.alert-danger').append('<p>'+value+'</p>');
-                });
-            }
-
-        });
-    });
+$('.open_popup').click(function(){
+    $('.overlay').fadeIn();
 });
+
+//закрыть на крестик
+$('.js-close-campaign').click(function() {
+    $('.overlay').fadeOut();
+
+});
+$(document).one('keydown', function(e){
+    if (e.keyCode == 27) {
+        js-overlay.close()
+    }
+});
+//кнопка для скрола (.btn_up)
+
+$('body').append('<button class="btn_up" />');
+
+$('.btn_up').click(function(){
+    $('body').animate({'scrollTop': 0}, 1000);
+    $('html').animate({'scrollTop': 0}, 1000);
+});
+
+$(window).scroll(function(){
+    if ($(window).scrollTop() > 200) {
+        $('.btn_up').addClass('active');
+    }
+    else{
+        $('.btn_up').removeClass('active');
+    }
+});
+
+
+// закрыть по клику вне окна
+// $(".js-overlay").on('click', function() {
+//  $('.modal-window').fadeOut(300);
+// }
+// });

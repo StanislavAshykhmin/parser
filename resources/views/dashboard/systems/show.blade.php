@@ -16,18 +16,19 @@
                 </a>
             </h5>
         </div>
-        <table id="datatables-dashboard" class="table table-striped">
+        <table id="datatables" class="table table-striped">
             <thead>
             <tr>
                 <th>Url</th>
                 <th>Language</th>
-                <th>Status</th>
+                <th>Status <span style="color: red">*</span></th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
             @foreach($sites as $site)
                 <tr>
-                    <td>@if($site->status == 3 || $site->status == 4)<a style="text-decoration: none;color: black;"
+                    <td>@if($site->status == 3 || $site->status == 4)<a style="color: black;"
                            href="{{route('email', ['id' => $site->id])}}">{{$site->url}}</a>
                         @else <s>{{$site->url}}</s>
                     @endif
@@ -35,12 +36,28 @@
                     <td>{{$site->lang}}</td>
                     <td>@if($site->status == 0) NotAvailable @elseif($site->status == 1) EmailNotFound @elseif($site->status == 2) LangNotFound @elseif($site->status == 3) NotProcessed
                     @else Processed @endif</td>
+                    <td>
+                        @if($site->status == 3 || $site->status == 4)
+                            <a href="{{route('email', ['id' => $site->id])}}"
+                               style="text-decoration: none;color: white;">
+                                <button type="button" class="btn btn-secondary btn-lg">
+                                    Visit
+                                </button>
+                            </a>
+                        @else <button type="button" class="btn btn-secondary  btn-lg disabled">
+                                <s>Visit</s>
+                            </button>
+                        @endif
+                    </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
+        <ul class="pagination" style="justify-content: center;">
+            {{ $sites->links() }}
+        </ul>
     </div>
-</div>
+    @include('dashboard.status.status-site')
 </div>
 </div>
 </main>
