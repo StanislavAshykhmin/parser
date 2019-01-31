@@ -1040,7 +1040,7 @@
 												<td class="center"
 												    style="border-collapse: collapse;border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 14.0px;font-weight: normal;line-height: 19.0px;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 0.0px;padding-left: 0.0px;padding-right: 0.0px;padding-top: 0.0px;text-align: center;vertical-align: top;">
 													<center style="border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-weight: normal;line-height: 0.0px;min-width: 580.0px;padding-bottom: 0.0px;padding-top: 0.0px;text-align: center;width: 100.0%;">
-														<img alt="" class="center" src="images/Logo_TV_2015.svg.png"
+														<img alt="" class="center" src="https://tvseriesfinale.com/wp-content/uploads/2016/01/1800x1500.jpg"
 														     style="border-spacing: 0 0;clear: both;color: #222222;display: inline-block;float: none;font-family: 'Rubik' , 'Arial' , sans-serif;font-weight: normal;line-height: 0.0px;margin-bottom: 0.0px;margin-left: auto;margin-right: auto;margin-top: 25px;max-width: 20%;outline-color: invert;outline-style: none;outline-width: medium;text-align: center;text-decoration: none;width: auto; border-bottom: 5px solid #f8e3f0;"/>
 													</center>
 												</td>
@@ -1093,7 +1093,7 @@
 												<td class="text-pad editableImage" data-context-padding-dir="text-pad"
 												    style="border-collapse: collapse;border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 14.0px;font-weight: normal;line-height: 19.0px;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 10.0px;padding-left: 20.0px;padding-right: 20.0px;padding-top: 0.0px;text-align: left;vertical-align: top;">
 													<img alt="" class="center"
-													     src="images/Site-migration-11-1030x569.jpg"
+													     src="https://goatcloud.com/wp-content/uploads/2012/07/SIMPLE-MIGRATION-1024x675.jpg"
 													     style="border-spacing: 0 0;clear: both;color: #222222;display: inline-block;float: none;font-family: 'Rubik' , 'Arial' , sans-serif;font-weight: normal;line-height: 0.0px;margin-bottom: 0.0px;margin-left: auto;margin-right: auto;margin-top: 0px;max-width: 100%;outline-color: invert;outline-style: none;outline-width: medium;text-align: center;text-decoration: none;width: auto;"/>
 												</td>
 												<td class="expander"
@@ -1119,12 +1119,12 @@
 											<tr style="border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-weight: normal;line-height: 19.0px;padding-bottom: 0.0px;padding-left: 0.0px;padding-right: 0.0px;padding-top: 0.0px;text-align: left;vertical-align: top;">
 												<td class="text-pad editableText"
 												    style="border-collapse: collapse;border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 14.0px;font-weight: normal;line-height: 19.0px;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 10.0px;padding-left: 20.0px;padding-right: 20.0px;padding-top: 0.0px;text-align: left;vertical-align: top;">
-													<h4 style="border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 16.0px;font-weight: normal;line-height: 1.3;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 20px;padding-left: 0.0px;padding-right: 0.0px;padding-top: 20px;text-align: left; border-bottom: 1px solid #f8e3f0; border-top: 1px solid #f8e3f0; ">
+													<h4 style=" text-indent: 1.5em; border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 16.0px;font-weight: normal;line-height: 1.3;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 20px;padding-left: 0.0px;padding-right: 0.0px;padding-top: 20px;text-align: left; border-bottom: 1px solid #f8e3f0; border-top: 1px solid #f8e3f0; ">
                             <span style="border-spacing: 0 0;color: #222222;font-family: 'Rubik' , 'Arial' , sans-serif;font-size: 14.0px;font-weight: normal;line-height: 1.3;text-align: left;">
                               <span style="background-color: #556271;border-spacing: 0 0;color: #7b8898;font-family: 'mercury ssm a' , 'mercury ssm b' , 'georgia' , 'times' , 'times new roman' , 'microsoft yahei new' , 'microsoft yahei' , '微软雅黑' , '宋体' , 'simsun' , 'stxihei' , '华文细黑' , serif;font-weight: normal;line-height: 1.3;text-align: left;">
                               </span>
-                              <strong style="background-color: #ffffff;border-spacing: 0 0;color: #000000;font-family: 'open sans' , 'arial' , sans-serif;font-weight: bold;line-height: 1.3;margin-bottom: 0.0px;margin-left: 0.0px;margin-right: 0.0px;margin-top: 0.0px;padding-bottom: 0.0px;padding-left: 0.0px;padding-right: 0.0px;padding-top: 0.0px;text-align: justify;">{{$title}}</strong>
-                              <span style="background-color: #ffffff;border-spacing: 0 0;color: #000000;font-family: 'open sans' , 'arial' , sans-serif;font-weight: normal;line-height: 1.3;text-align: justify;"> {{$title}}
+
+                              <span style="background-color: #ffffff;border-spacing: 0 0;color: #000000;font-family: 'open sans' , 'arial' , sans-serif;font-weight: normal;line-height: 1.3;text-align: justify; "> {{$text}}
                               </span>
                             </span>
 													</h4>
